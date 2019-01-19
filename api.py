@@ -58,7 +58,7 @@ def create_document_recognition():
         if result != None:
             api_response.append(result)
 
-    return jsonify(api_response)
+    return jsonify({ 'dataSize':len(api_response), 'data' : api_response })
 
 def is_bounded(mode, t, w, h, i):
     # The templates
@@ -90,7 +90,8 @@ def iterate_and_find(annotation, image_size, mode, result):
             found_vertices[idx] = True
             if False not in found_vertices:
                 print('Found Text in Bounding Vertices: ' + annotation.description)
-                result[mode] = annotation.description
+                result['Key'] = mode
+                result['Value'] = annotation.description
             idx+=1
         else:
             break
