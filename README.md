@@ -39,12 +39,17 @@ Content-Type: image/jpeg
 
 Response:
 ```
-[
-    {
-        "VIC_LICENCE_NUMBER": "123456789"
-    },
-    {
-        "VIC_LICENCE_EXPIRY": "12-04-2021"
-    }
-]
+{
+    "data": [
+        {
+            "Key": "VIC_LICENCE_NUMBER",
+            "Value": "987654321"
+        },
+        {
+            "Key": "VIC_LICENCE_EXPIRY",
+            "Value": "20-05-2019"
+        }
+    ],
+    "dataSize": 2
+}
 ```
